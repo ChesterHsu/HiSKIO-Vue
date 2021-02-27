@@ -35,6 +35,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    ['@nuxtjs/tailwindcss']
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
