@@ -39,7 +39,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/toast',
+    ['@nuxtjs/dotenv', { filename: '.env.prod' }]
   ],
+  toast: {
+    position: 'top-center',
+    duration: 2000
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
