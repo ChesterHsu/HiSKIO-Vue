@@ -1,5 +1,5 @@
 <template>
-  <h1>11111111111111111111111111111111111111111111111111111111111111</h1>
+  <el-button type="danger">2222222</el-button>
 </template>
 
 <script>
