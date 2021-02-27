@@ -1,5 +1,6 @@
 <template>
   <v-app-bar
+    class="h-40"
     flat
     app
   >

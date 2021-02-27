@@ -2,3 +2,55 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+@import './vuetify-material/_sidebar.scss';
+
+html {
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+// html::-webkit-scrollbar {
+//   width: 0;
+//   height: 0;
+// }
+
+.v-main {
+  padding-top: 0 !important;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  overflow-y: auto;
+}
+
+.table {
+  .v-data-table-header {
+    th {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.filter {
+  .col {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+.v-tab {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.approve {
+  color: #fff !important;
+  background-color: green !important;
+}
+.reject {
+  color: #fff !important;
+  background-color: red !important;
+}
