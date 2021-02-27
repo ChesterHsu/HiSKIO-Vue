@@ -19,6 +19,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/axios',
+    '~/plugins/api',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,9 +37,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://go.nuxtjs.dev/axios
+    ['@nuxtjs/axios'],
     '@nuxtjs/toast',
-    ['@nuxtjs/dotenv', { filename: '.env.prod' }]
+    ['@nuxtjs/dotenv', { filename: '.env.prod' }],
   ],
+  axios: {
+    baseURL: process.env.HiSKIO_BASE_API,
+    retry: { retries: 3 }
+  },
   toast: {
     position: 'top-center',
     duration: 2000
@@ -57,6 +65,15 @@ export default {
           // warning: colors.amber.base,
           // error: colors.deepOrange.accent4,
           // success: colors.green.accent3
+        },
+        light: {
+          primary: '#1976D2',
+          secondary: '#80CBC4',
+          accent: '#00BFA5',
+          error: '#FF5252',
+          info: '#2196F3',
+          success: '#4CAF50',
+          warning: '#FFC107',
         }
       }
     }
