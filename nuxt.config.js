@@ -42,6 +42,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     ['@nuxtjs/axios'],
     '@nuxtjs/toast',
+
     ['@nuxtjs/dotenv', { filename: '.env.prod' }],
   ],
   axios: {

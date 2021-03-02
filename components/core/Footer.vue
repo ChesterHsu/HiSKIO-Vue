@@ -22,13 +22,12 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        HiSKIO 專注於讓任何人能在線上學習到職業知識與工作上派得上用場的技術。從 2016 年底草創以來，已累積上架200多堂線上課程以及數十套路徑式的學習組合，並解決超過 60,000 位業界技術人員的職業進修需求。我們從線上課程平台的角色出發， 提供各種領域由業界師資製作的線上課程，並研發線上互動式的學習型產品，讓學習者只要透過線上學習，就能成為獨立的科技職人。
       </v-card-text>
 
       <v-divider></v-divider>
-
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        Copyright {{ new Date().getFullYear() }} HiSKIO
       </v-card-text>
     </v-card>
   </v-footer>

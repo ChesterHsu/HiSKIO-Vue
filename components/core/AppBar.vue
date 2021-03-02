@@ -8,7 +8,6 @@
               class="lg:block h-5 w-auto"
               src="@/assets/images/HiSKIO.png"
               alt="Workflow"
-              @click="myMethod"
               type="button" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <v-icon>mdi-magnify</v-icon>
@@ -18,26 +17,42 @@
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
                 <a class="text-gray-300 text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">我想開課</a>
-                <v-icon dense type="button">mdi-cart-outline</v-icon>
+                <v-icon dense type="button" @click="showShoppingCar">mdi-cart-outline</v-icon>
                 <v-icon dense type="button">mdi-alert-circle</v-icon>
-                <v-btn :elevation="0">登入</v-btn>
+                <v-btn :elevation="0" @click="LoginDialog = true">登入</v-btn>
                 <v-btn class="white--text" :elevation="0" color="#2f8eac">註冊</v-btn>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <LoginDialog v-model="LoginDialog"></LoginDialog>
+    <ShoppingCar
+      :ShoppingCarDrawer="ShoppingCarDrawer"
+      @closeShoppingDrawer="closeShoppingDrawer"
+    />
   </nav>
 </template>
 
 <script>
+import LoginDialog from "@/components/dialog/LoginDialog";
+import ShoppingCar from "@/components/core/ShoppingCar";
+
 export default {
+  components:{ LoginDialog,ShoppingCar },
   data: () => ({
     Search: '',
+    LoginDialog: false,
+    ShoppingCarDrawer: false,
+    rightDrawer: false,
+    right: true,
   }),
   methods:{
-    myMethod() {
-      this.$router.push('/')
+    showShoppingCar() {
+      this.ShoppingCarDrawer = true;
+    },
+    closeShoppingDrawer() {
+      this.ShoppingCarDrawer = false;
     }
   }
 }
